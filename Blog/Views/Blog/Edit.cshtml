@@ -1,0 +1,37 @@
+﻿@model Blog.Models.Post
+
+@{
+    ViewBag.Title = "Editar Postagem";
+}
+
+<h2>Editar Postagem</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Titulo, new { @class = "control-label" })
+        @Html.EditorFor(model => model.Titulo, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Conteudo, new { @class = "control-label" })
+        @Html.TextAreaFor(model => model.Conteudo, new { @class = "form-control", rows = 4 })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DataPublicacao, new { @class = "control-label" })
+        @Html.EditorFor(model => model.DataPublicacao, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Salvar Alterações" class="btn btn-primary" />
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-default" })
+</div>

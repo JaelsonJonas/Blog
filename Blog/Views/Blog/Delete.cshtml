@@ -1,0 +1,35 @@
+﻿@model Blog.Models.Post
+
+@{
+    ViewBag.Title = "Excluir Postagem";
+}
+
+<h2>Excluir Postagem</h2>
+
+<h3>Você tem certeza de que deseja excluir esta postagem?</h3>
+<div>
+    <h4>Detalhes da Postagem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <!-- Adicione outras propriedades da postagem aqui, se necessário -->
+    </dl>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <input type="submit" value="Excluir" class="btn btn-danger" />
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-default" })
+</div>
