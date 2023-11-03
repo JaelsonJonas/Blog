@@ -10,9 +10,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color: rgba(171, 210, 239, 0.8);">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Blog</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"> <img class="logo-img" src="../Assets/logoBlog.png" alt="Imagem de background" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,10 +20,10 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Blog" asp-action="Index"> Posts </a>
                         </li>
                     </ul>
                 </div>
@@ -35,12 +35,21 @@
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - Blog - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="border-top footer text-white">
+        <div class="container justify-items-between align-items-center">
+            <span class="name-span">RM:93915 <a href="https://github.com/jaelsonjonas" target="_blank">JAELSON DOS SANTOS</a></span> -
+            <span class="name-span">RM:94311 <a href="https://github.com/marcosbilobram" target="_blank">MARCOS BILOBRAM</a></span> -
+            <span class="name-span">RM:96320 <a href="https://github.com/natmaia" target="_blank">NATHÁLIA MAIA</a></span> -
+            <span class="name-span">RM:94972 <a href="https://github.com/gsrafaela" target="_blank">RAFAELA DA SILVA</a></span> -
+            <span class="name-span">RM:93613 <a href="https://github.com/ViniOlr" target="_blank">VINICIUS DE OLIVEIRA</a></span>
+            &copy; 2023 - Blog
         </div>
     </footer>
+
+
+
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

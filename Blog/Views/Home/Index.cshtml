@@ -1,15 +1,26 @@
-﻿﻿@{
+﻿@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
-        <img class="max-img" src="" alt="Imagem Responsiva" />
-    </div>
-</div>
-
 <style>
     .max-img {
-        max-height: 100vh; /* Define a altura máxima da imagem */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .cover {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; 
     }
 </style>
+
+<div class="cover">
+    <img class="max-img" src="../Assets/bgBlog.png" alt="Imagem de background" />
+</div>
+
+
