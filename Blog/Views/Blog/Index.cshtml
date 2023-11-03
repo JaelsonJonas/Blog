@@ -4,31 +4,57 @@
     ViewBag.Title = "Lista de Postagens";
 }
 
-<h2>Lista de Postagens</h2>
-
-<p>
-    @Html.ActionLink("Criar Nova Postagem", "Create")
-</p>
-
-<table class="table">
-    <tr>
-        <th>Título</th>
-        <th>Data de Publicação</th>
-        <th>Comentários</th>
-        <th>Ações</th>
-    </tr>
-
-    @foreach (var post in Model)
-    {
-        <tr>
-            <td>@Html.DisplayFor(modelItem => post.Titulo)</td>
-            <td>@Html.DisplayFor(modelItem => post.DataPublicacao)</td>
-            <td>@post?.Comentarios?.Count</td>
-            <td>
-                @Html.ActionLink("Detalhes", "Details", new { id = post?.Id })
-                @Html.ActionLink("Editar", "Edit", new { id = post?.Id })
-                @Html.ActionLink("Excluir", "Delete", new { id = post?.Id })
-            </td>
-        </tr>
+<style>
+    .max-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
-</table>
+
+    .cover {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+</style>
+
+<div class="cover">
+    <img class="max-img" src="assets/bgBlogDark.png" alt="Imagem de background" />
+</div>
+
+<h2 style="color: white;">Lista de Postagens</h2>
+
+<div style ="background-color: rgba(171, 210, 239, 0.8); height: 500px; width: 100%;">
+
+    <table class="table">
+        <tr>
+            <th style="color: rgb(84,167,227);">Título</th>
+            <th style="color: rgb(84,167,227);">Data de Publicação</th>
+            <th style="color: rgb(84,167,227);">Comentários</th>
+            <th style="color: rgb(84,167,227);">Ações</th>
+        </tr>
+
+        @foreach (var post in Model)
+        {
+            <tr>
+                <td style="color: white;">@Html.DisplayFor(modelItem => post.Titulo)</td>
+                <td style="color: white;">@Html.DisplayFor(modelItem => post.DataPublicacao)</td>
+                <td style="color: white;">@post?.Comentarios?.Count</td>
+                <td style="color: white;">
+                    @Html.ActionLink("Detalhes", "Details", new { id = post?.Id })
+                    @Html.ActionLink("Editar", "Edit", new { id = post?.Id })
+                    @Html.ActionLink("Excluir", "Delete", new { id = post?.Id })
+                </td>
+            </tr>
+        }
+    </table>
+    <div style="display: flex; justify-content: end; align-items: center; margin:20px; ">
+        <p style="padding:20px;border: 2px solid rgb(84,167,227); border-radius:20px; display: flex; justify-content: end; align-items: center;">
+            @Html.ActionLink("Criar Nova Postagem", "Create")
+        </p>
+
+    </div>
+</div>
