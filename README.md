@@ -1,38 +1,27 @@
-## Funcionalidades
+# Projeto BLOG
 
-1. **Criar um post** (Pontuação: 1.0)
-   - Os usuários podem criar um post e definir a data da publicação. (OK)
+Este projeto BLOG foi desenvolvido como parte do checkpoint da disciplina de Enterprise. O objetivo deste projeto é criar uma aplicação web utilizando o framework ASP.NET MVC para gerenciar um blog.
 
-2. **Listar todos os posts** (Pontuação: 1.0)
-   - Os posts são listados com o título, data de publicação e quantidade de comentários. (OK)
+## Alunos Envolvidos
+- RM:93915 [JAELSON DOS SANTOS](https://github.com/jaelsonjonas)
+- RM:94311 [MARCOS BILOBRAM](https://github.com/marcosbilobram)
+- RM:96320 [NATHÁLIA MAIA](https://github.com/natmaia)
+- RM:94972 [RAFAELA DA SILVA](https://github.com/gsrafaela)
+- RM:93613 [VINICIUS DE OLIVEIRA](https://github.com/ViniOlr)
+            
 
-3. **Pesquisar posts por parte do título** (Pontuação: 2.0)
-   - Os usuários podem pesquisar os posts com base em parte do título. (Faltou essa funcionalidade no front.)
+## Tecnologias Utilizadas
+- ASP.NET MVC
 
-4. **Editar um post existente** (Pontuação: 1.0)
-   - Os usuários podem editar um post existente. (Problema: Existe o redirecionamento para editar o post mas não ocorre a edição quando clica no botão.)
+## Como Executar o Projeto
+1. Clone este repositório em sua máquina local.
+2. Abra o projeto no Visual Studio.
+3. Execute a aplicação.
 
-5. **Excluir um post** (Pontuação: 1.0)
-   - Os usuários podem excluir um post, com uma confirmação antes da ação. (OK)
-
-6. **Exibir detalhes de um post e comentários associados** (Pontuação: 2.0)
-   - Os detalhes de um post são exibidos, incluindo os comentários associados. (OK)
-
-7. **Comentários em um post** (Pontuação: 2.0)
-   - Na visualização de detalhes de um post, os usuários podem comentar no post, e a data de criação do post deve ser a data e hora atuais. (Problema: Ocorre o erro 404 ao acessar o endpoint http://localhost:5134/Blog/AddComment?postId=2.)
-
-## Observações
-
-Certifique-se de resolver os problemas identificados durante os testes e desenvolver as funcionalidades faltantes para que o projeto seja concluído com sucesso. A pontuação atribuída às funcionalidades está indicada entre parênteses.
-
-## O que Falta?
-
-3. **Pesquisar posts por parte do título** (Pontuação: 2.0)
-   - Os usuários podem pesquisar os posts com base em parte do título. (Faltou essa funcionalidade no front.)
-   - 
-4. **Editar um post existente** (Pontuação: 1.0)
-   - Os usuários podem editar um post existente. (Problema: Existe o redirecionamento para editar o post mas não ocorre a edição quando clica no botão.)
-  
-7. **Comentários em um post** (Pontuação: 2.0)
-   - Na visualização de detalhes de um post, os usuários podem comentar no post, e a data de criação do post deve ser a data e hora atuais. (Problema: Ocorre o erro 404 ao acessar o endpoint http://localhost:5134/Blog/AddComment?postId=2.)
+## Funcionalidades Principais
+- Listar posts do blog
+- Criar novos posts
+- Editar posts existentes
+- Excluir posts
+- Pesquisar Posts por titulo
 
