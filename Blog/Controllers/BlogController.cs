@@ -45,6 +45,16 @@ namespace Blog.Controllers
             return db.Posts?.Include(p => p.Comentarios).FirstOrDefault(p => p.Id == id);
         }
 
+
+        [HttpPost]
+        public IActionResult Edit(Post post) {
+
+            db.Posts?.Update(post);
+            db.SaveChanges();
+            return RedirectToAction("index");
+        }
+
+        [HttpGet]
         public IActionResult Edit(int id)
         {
             var post = GetPostById(id);
@@ -52,6 +62,7 @@ namespace Blog.Controllers
             {
                 return NotFound();
             }
+            post = db.Posts?.Include(post => post.Comentarios).First(p => p.Id == id);
 
             return View(post);
         }
@@ -91,6 +102,27 @@ namespace Blog.Controllers
             }
 
             return View(post);
+        }
+
+        [HttpPost]
+        public IActionResult AddComment(int id,Comentario comentario)
+        {
+
+            var post = db.Posts?.Find(id);
+            if (post == null)
+            {
+                return NotFound();
+            }
+
+            comentario.Post = post;
+            comentario.DataComentario = DateTime.Now;
+
+            db.Comentarios?.Add(comentario);
+            db.SaveChanges();
+
+
+
+            return View();
         }
     }
 }
