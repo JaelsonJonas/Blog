@@ -20,3 +20,31 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%; 
+}
+
+    .search-container h2 {
+        margin-right: 10px; 
+    }
+
+    .search-container input[type="text"] {
+        margin-right: 20px; 
+    }
+    .search-button {
+        background-color: rgb(84, 167, 227);
+        color: white;
+        border: none;
+        border-radius: 20px; 
+        padding: 10px 20px; 
+        cursor: pointer;
+    }
+
+        .search-button:hover {
+            background-color: #4a90e2; 
+        }
